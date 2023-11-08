@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mp.medicinalplant.mapper.PlantMapper">
+
+    <resultMap id="BaseResultMap" type="com.mp.medicinalplant.entity.pojo.Plant">
+            <id property="plantid" column="plantId" jdbcType="BIGINT"/>
+            <result property="plantname" column="plantName" jdbcType="VARCHAR"/>
+            <result property="latinname" column="latinName" jdbcType="VARCHAR"/>
+            <result property="anothername" column="anotherName" jdbcType="VARCHAR"/>
+            <result property="familyclassification" column="familyClassification" jdbcType="VARCHAR"/>
+            <result property="pictureurl" column="pictureUrl" jdbcType="VARCHAR"/>
+            <result property="medicinalparts" column="medicinalParts" jdbcType="VARCHAR"/>
+            <result property="producer" column="producer" jdbcType="VARCHAR"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="createtime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updatetime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isdelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        plantId,plantName,latinName,
+        anotherName,familyClassification,pictureUrl,
+        medicinalParts,producer,description,
+        createTime,updateTime,isDelete
+    </sql>
+</mapper>

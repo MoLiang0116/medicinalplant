@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mp.medicinalplant.mapper.PlantinsectMapper">
+
+    <resultMap id="BaseResultMap" type="com.mp.medicinalplant.entity.pojo.Plantinsect">
+            <id property="plantid" column="plantId" jdbcType="BIGINT"/>
+            <id property="insectid" column="insectId" jdbcType="BIGINT"/>
+            <result property="damagepart" column="damagePart" jdbcType="VARCHAR"/>
+            <result property="damagesymptom" column="damageSymptom" jdbcType="VARCHAR"/>
+            <result property="damagepeculiarity" column="damagePeculiarity" jdbcType="VARCHAR"/>
+            <result property="occurrencerule" column="occurrenceRule" jdbcType="VARCHAR"/>
+            <result property="controlmethod" column="controlMethod" jdbcType="VARCHAR"/>
+            <result property="damagepictureurl" column="damagePictureUrl" jdbcType="VARCHAR"/>
+            <result property="createtime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updatetime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isdelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        plantId,insectId,damagePart,
+        damageSymptom,damagePeculiarity,occurrenceRule,
+        controlMethod,damagePictureUrl,createTime,
+        updateTime,isDelete
+    </sql>
+</mapper>
