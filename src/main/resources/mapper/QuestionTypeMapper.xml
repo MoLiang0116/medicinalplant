@@ -2,19 +2,18 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.mp.medicinalplant.mapper.AnswerMapper">
+<mapper namespace="com.mp.medicinalplant.mapper.QuestionTypeMapper">
 
-    <resultMap id="BaseResultMap" type="com.mp.medicinalplant.entity.pojo.Answer">
-            <id property="answerId" column="answerId" jdbcType="BIGINT"/>
-            <result property="answerValue" column="answerValue" jdbcType="VARCHAR"/>
-            <result property="userId" column="UserId" jdbcType="BIGINT"/>
+    <resultMap id="BaseResultMap" type="com.mp.medicinalplant.entity.pojo.QuestionType">
+            <id property="questionTypeId" column="QuestionTypeId" jdbcType="BIGINT"/>
+            <result property="questionTypeName" column="QuestionTypeName" jdbcType="VARCHAR"/>
             <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
             <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
             <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-        answerId,answerValue,UserId,
-        createTime,updateTime,isDelete
+        QuestionTypeId,QuestionTypeName,createTime,
+        updateTime,isDelete
     </sql>
 </mapper>

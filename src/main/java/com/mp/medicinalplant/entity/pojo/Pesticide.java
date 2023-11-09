@@ -17,22 +17,22 @@ public class Pesticide implements Serializable {
      * 登记证号
      */
     @TableId
-    private String registrationcertificate;
+    private String registrationCertificate;
 
     /**
      * 农药名称
      */
-    private String pesticidename;
+    private String pesticideName;
 
     /**
      * 登记作物
      */
-    private String plantnames;
+    private String plantNames;
 
     /**
      * 农药类型
      */
-    private String pesticidetype;
+    private String pesticideType;
 
     /**
      * 防治对象
@@ -47,18 +47,18 @@ public class Pesticide implements Serializable {
     /**
      * 创建时间
      */
-    private Date createtime;
+    private Date createTime;
 
     /**
      * 更新时间
      */
-    private Date updatetime;
+    private Date updateTime;
 
     /**
      * 是否删除
      */
     @TableLogic
-    private Integer isdelete;
+    private Integer isDelete;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

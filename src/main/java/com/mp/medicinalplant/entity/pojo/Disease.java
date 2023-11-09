@@ -16,33 +16,33 @@ public class Disease implements Serializable {
     /**
      * 病害ID
      */
-    @TableId
-    private Long diseaseid;
+    @TableId(type = IdType.AUTO)
+    private Long diseaseId;
 
     /**
      * 病害植物学名
      */
-    private String plantname;
+    private String plantName;
 
     /**
      * 病害名称
      */
-    private String diseasename;
+    private String diseaseName;
 
     /**
      * 拉丁名
      */
-    private String latinname;
+    private String latinName;
 
     /**
      * 病害部位
      */
-    private String diseasesite;
+    private String diseaseSite;
 
     /**
      * 病害状
      */
-    private String diseasestate;
+    private String diseaseState;
 
     /**
      * 分布与危害
@@ -52,38 +52,38 @@ public class Disease implements Serializable {
     /**
      * 病因
      */
-    private String diseasecause;
+    private String diseaseCause;
 
     /**
      * 发生规律
      */
-    private String occurrencerule;
+    private String occurrenceRule;
 
     /**
      * 防治方法
      */
-    private String controlmethod;
+    private String controlMethod;
 
     /**
      * 被害照片
      */
-    private String damagepictureurl;
+    private String damagePictureUrl;
 
     /**
      * 创建时间
      */
-    private Date createtime;
+    private Date createTime;
 
     /**
      * 更新时间
      */
-    private Date updatetime;
+    private Date updateTime;
 
     /**
      * 是否删除
      */
     @TableLogic
-    private Integer isdelete;
+    private Integer isDelete;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

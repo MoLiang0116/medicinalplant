@@ -8,69 +8,69 @@ import lombok.Data;
 
 /**
  * 
- * @TableName plantinsect
+ * @TableName PlantInsect
  */
-@TableName(value ="plantinsect")
+@TableName(value ="PlantInsect")
 @Data
-public class Plantinsect implements Serializable {
+public class PlantInsect implements Serializable {
     /**
      * 植物ID
      */
     @TableId
-    private Long plantid;
+    private Long plantId;
 
     /**
      * 虫害ID
      */
     @TableId
-    private Long insectid;
+    private Long insectId;
 
     /**
      * 危害部位
      */
-    private String damagepart;
+    private String damagePart;
 
     /**
      * 危害症状
      */
-    private String damagesymptom;
+    private String damageSymptom;
 
     /**
      * 危害特点
      */
-    private String damagepeculiarity;
+    private String damagePeculiarity;
 
     /**
      * 发生规律
      */
-    private String occurrencerule;
+    private String occurrenceRule;
 
     /**
      * 防治方法
      */
-    private String controlmethod;
+    private String controlMethod;
 
     /**
      * 被害照片
      */
-    private String damagepictureurl;
+    private String damagePictureUrl;
 
     /**
      * 创建时间
      */
-    private Date createtime;
+    private Date createTime;
 
     /**
      * 更新时间
 
      */
-    private Date updatetime;
+    private Date updateTime;
 
     /**
      * 是否删除
      */
     @TableLogic
-    private Integer isdelete;
+    private Integer isDelete;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

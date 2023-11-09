@@ -16,8 +16,8 @@ public class User implements Serializable {
     /**
      * 用户Id
      */
-    @TableId
-    private Long userid;
+    @TableId(type = IdType.AUTO)
+    private Long userId;
 
     /**
      * 账号
@@ -33,6 +33,11 @@ public class User implements Serializable {
      * 密码
      */
     private String password;
+
+    /**
+     * 头像
+     */
+    private String avatarUrl;
 
     /**
      * 年龄
@@ -62,18 +67,18 @@ public class User implements Serializable {
     /**
      * 创建时间
      */
-    private Date createtime;
+    private Date createTime;
 
     /**
      * 更新时间
      */
-    private Date updatetime;
+    private Date updateTime;
 
     /**
      * 0 - 未删除	1 - 已删除
      */
     @TableLogic
-    private Integer isdelete;
+    private Integer isDelete;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

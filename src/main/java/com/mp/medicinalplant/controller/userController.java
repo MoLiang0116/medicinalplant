@@ -2,6 +2,7 @@ package com.mp.medicinalplant.controller;
 
 import com.mp.medicinalplant.common.BaseResponse;
 import com.mp.medicinalplant.common.ErrorCode;
+import com.mp.medicinalplant.entity.dto.LoginDTO;
 import com.mp.medicinalplant.entity.dto.RegisterDTO;
 import com.mp.medicinalplant.entity.pojo.User;
 import com.mp.medicinalplant.exception.BusinessException;
@@ -11,6 +12,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping("/user")
@@ -33,8 +36,17 @@ public class userController {
         return ResultUtils.success(userService.userRegister(userAccount,username,userPassword,checkPassword));
     }
 
-//    @GetMapping("/login")
-//    public BaseResponse<User> userlogin(String account,String password){
-//
-//    }
+    @PostMapping("/login")
+    public BaseResponse<User> userLogin(@RequestBody LoginDTO loginDTO, HttpServletRequest request){
+        if (loginDTO==null){
+            throw new BusinessException(ErrorCode.NULL_ERROR);
+        }
+        String account = loginDTO.getAccount();
+        String password = loginDTO.getPassword();
+        if (StringUtils.isAnyBlank(account,password)){
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        User user = userService.userLogin(account,password,request);
+        return ResultUtils.success(user);
+    }
 }

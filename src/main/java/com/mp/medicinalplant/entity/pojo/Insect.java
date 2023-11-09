@@ -16,28 +16,28 @@ public class Insect implements Serializable {
     /**
      * 虫害ID
      */
-    @TableId
-    private Integer insectid;
+    @TableId(type = IdType.AUTO)
+    private Integer insectId;
 
     /**
      * 虫害名
      */
-    private String insectname;
+    private String insectName;
 
     /**
      * 拉丁名
      */
-    private String latinname;
+    private String latinName;
 
     /**
      * 别名
      */
-    private String anthornames;
+    private String anthorNames;
 
     /**
      * 科属分类
      */
-    private String familyclassification;
+    private String familyClassification;
 
     /**
      * 分布区域
@@ -52,23 +52,23 @@ public class Insect implements Serializable {
     /**
      * 形态照片
      */
-    private String pictureurl;
+    private String pictureUrl;
 
     /**
      * 创建时间
      */
-    private Date createtime;
+    private Date createTime;
 
     /**
      * 更新时间
      */
-    private Date updatetime;
+    private Date updateTime;
 
     /**
      * 是否删除
      */
     @TableLogic
-    private Integer isdelete;
+    private Integer isDelete;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

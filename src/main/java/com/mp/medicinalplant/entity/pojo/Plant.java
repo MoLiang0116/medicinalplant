@@ -16,38 +16,38 @@ public class Plant implements Serializable {
     /**
      * 编号
      */
-    @TableId
-    private Long plantid;
+    @TableId(type = IdType.AUTO)
+    private Long plantId;
 
     /**
      * 学名
      */
-    private String plantname;
+    private String plantName;
 
     /**
      * 拉丁文名
      */
-    private String latinname;
+    private String latinName;
 
     /**
      * 别名
      */
-    private String anothername;
+    private String anotherName;
 
     /**
      * 科属分类
      */
-    private String familyclassification;
+    private String familyClassification;
 
     /**
      * 照片url
      */
-    private String pictureurl;
+    private String pictureUrl;
 
     /**
      * 药用部位
      */
-    private String medicinalparts;
+    private String medicinalParts;
 
     /**
      * 产地分布
@@ -62,18 +62,18 @@ public class Plant implements Serializable {
     /**
      * 创建时间
      */
-    private Date createtime;
+    private Date createTime;
 
     /**
      * 更新时间
      */
-    private Date updatetime;
+    private Date updateTime;
 
     /**
      * 0 - 未删除	1 - 已删除
      */
     @TableLogic
-    private Integer isdelete;
+    private Integer isDelete;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

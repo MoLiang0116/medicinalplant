@@ -5,17 +5,17 @@
 <mapper namespace="com.mp.medicinalplant.mapper.InsectMapper">
 
     <resultMap id="BaseResultMap" type="com.mp.medicinalplant.entity.pojo.Insect">
-            <id property="insectid" column="insectId" jdbcType="INTEGER"/>
-            <result property="insectname" column="insectName" jdbcType="VARCHAR"/>
-            <result property="latinname" column="latinName" jdbcType="VARCHAR"/>
-            <result property="anthornames" column="anthorNames" jdbcType="VARCHAR"/>
-            <result property="familyclassification" column="familyClassification" jdbcType="VARCHAR"/>
+            <id property="insectId" column="insectId" jdbcType="INTEGER"/>
+            <result property="insectName" column="insectName" jdbcType="VARCHAR"/>
+            <result property="latinName" column="latinName" jdbcType="VARCHAR"/>
+            <result property="anthorNames" column="anthorNames" jdbcType="VARCHAR"/>
+            <result property="familyClassification" column="familyClassification" jdbcType="VARCHAR"/>
             <result property="distribution" column="distribution" jdbcType="VARCHAR"/>
             <result property="description" column="description" jdbcType="VARCHAR"/>
-            <result property="pictureurl" column="pictureUrl" jdbcType="VARCHAR"/>
-            <result property="createtime" column="createTime" jdbcType="TIMESTAMP"/>
-            <result property="updatetime" column="updateTime" jdbcType="TIMESTAMP"/>
-            <result property="isdelete" column="isDelete" jdbcType="TINYINT"/>
+            <result property="pictureUrl" column="pictureUrl" jdbcType="VARCHAR"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
     </resultMap>
 
     <sql id="Base_Column_List">

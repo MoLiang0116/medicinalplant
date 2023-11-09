@@ -8,37 +8,37 @@ import lombok.Data;
 
 /**
  * 
- * @TableName questiontype
+ * @TableName QuestionType
  */
-@TableName(value ="questiontype")
+@TableName(value ="QuestionType")
 @Data
-public class Questiontype implements Serializable {
+public class QuestionType implements Serializable {
     /**
      * 问题类型编号
      */
-    @TableId
-    private Long questiontypeid;
+    @TableId(type = IdType.AUTO)
+    private Long QuestionTypeId;
 
     /**
      * 问题类型名称
      */
-    private String questiontypename;
+    private String QuestionTypeName;
 
     /**
      * 创建时间
      */
-    private Date createtime;
+    private Date createTime;
 
     /**
      * 更新时间
      */
-    private Date updatetime;
+    private Date updateTime;
 
     /**
      * 是否删除	0 - 未删除	1 - 已删除
      */
     @TableLogic
-    private Integer isdelete;
+    private Integer isDelete;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

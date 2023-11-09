@@ -5,20 +5,20 @@
 <mapper namespace="com.mp.medicinalplant.mapper.DiseaseMapper">
 
     <resultMap id="BaseResultMap" type="com.mp.medicinalplant.entity.pojo.Disease">
-            <id property="diseaseid" column="diseaseId" jdbcType="BIGINT"/>
-            <result property="plantname" column="plantName" jdbcType="VARCHAR"/>
-            <result property="diseasename" column="diseaseName" jdbcType="VARCHAR"/>
-            <result property="latinname" column="latinName" jdbcType="VARCHAR"/>
-            <result property="diseasesite" column="diseaseSite" jdbcType="VARCHAR"/>
-            <result property="diseasestate" column="diseaseState" jdbcType="VARCHAR"/>
+            <id property="diseaseId" column="diseaseId" jdbcType="BIGINT"/>
+            <result property="plantName" column="plantName" jdbcType="VARCHAR"/>
+            <result property="diseaseName" column="diseaseName" jdbcType="VARCHAR"/>
+            <result property="latinName" column="latinName" jdbcType="VARCHAR"/>
+            <result property="diseaseSite" column="diseaseSite" jdbcType="VARCHAR"/>
+            <result property="diseaseState" column="diseaseState" jdbcType="VARCHAR"/>
             <result property="description" column="description" jdbcType="VARCHAR"/>
-            <result property="diseasecause" column="diseaseCause" jdbcType="VARCHAR"/>
-            <result property="occurrencerule" column="occurrenceRule" jdbcType="VARCHAR"/>
-            <result property="controlmethod" column="controlMethod" jdbcType="VARCHAR"/>
-            <result property="damagepictureurl" column="damagePictureUrl" jdbcType="VARCHAR"/>
-            <result property="createtime" column="createTime" jdbcType="TIMESTAMP"/>
-            <result property="updatetime" column="updateTime" jdbcType="TIMESTAMP"/>
-            <result property="isdelete" column="isDelete" jdbcType="TINYINT"/>
+            <result property="diseaseCause" column="diseaseCause" jdbcType="VARCHAR"/>
+            <result property="occurrenceRule" column="occurrenceRule" jdbcType="VARCHAR"/>
+            <result property="controlMethod" column="controlMethod" jdbcType="VARCHAR"/>
+            <result property="damagePictureUrl" column="damagePictureUrl" jdbcType="VARCHAR"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
     </resultMap>
 
     <sql id="Base_Column_List">

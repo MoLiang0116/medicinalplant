@@ -11,8 +11,14 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
+  profiles:
+    active: dev
 mybatis-plus:
   global-config:
     db-config:
       logic-delete-value: 1
       logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: false
+swagger:
+  enable: true

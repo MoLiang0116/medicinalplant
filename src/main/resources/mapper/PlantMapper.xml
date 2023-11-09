@@ -5,18 +5,18 @@
 <mapper namespace="com.mp.medicinalplant.mapper.PlantMapper">
 
     <resultMap id="BaseResultMap" type="com.mp.medicinalplant.entity.pojo.Plant">
-            <id property="plantid" column="plantId" jdbcType="BIGINT"/>
-            <result property="plantname" column="plantName" jdbcType="VARCHAR"/>
-            <result property="latinname" column="latinName" jdbcType="VARCHAR"/>
-            <result property="anothername" column="anotherName" jdbcType="VARCHAR"/>
-            <result property="familyclassification" column="familyClassification" jdbcType="VARCHAR"/>
-            <result property="pictureurl" column="pictureUrl" jdbcType="VARCHAR"/>
-            <result property="medicinalparts" column="medicinalParts" jdbcType="VARCHAR"/>
+            <id property="plantId" column="plantId" jdbcType="BIGINT"/>
+            <result property="plantName" column="plantName" jdbcType="VARCHAR"/>
+            <result property="latinName" column="latinName" jdbcType="VARCHAR"/>
+            <result property="anotherName" column="anotherName" jdbcType="VARCHAR"/>
+            <result property="familyClassification" column="familyClassification" jdbcType="VARCHAR"/>
+            <result property="pictureUrl" column="pictureUrl" jdbcType="VARCHAR"/>
+            <result property="medicinalParts" column="medicinalParts" jdbcType="VARCHAR"/>
             <result property="producer" column="producer" jdbcType="VARCHAR"/>
             <result property="description" column="description" jdbcType="VARCHAR"/>
-            <result property="createtime" column="createTime" jdbcType="TIMESTAMP"/>
-            <result property="updatetime" column="updateTime" jdbcType="TIMESTAMP"/>
-            <result property="isdelete" column="isDelete" jdbcType="TINYINT"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
     </resultMap>
 
     <sql id="Base_Column_List">

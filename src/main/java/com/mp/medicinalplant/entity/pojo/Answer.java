@@ -16,34 +16,34 @@ public class Answer implements Serializable {
     /**
      * 回答Id
      */
-    @TableId
-    private Long answerid;
+    @TableId(type = IdType.AUTO)
+    private Long answerId;
 
     /**
      * 回答内容
      */
-    private String answervalue;
+    private String answerValue;
 
     /**
      * 回答者Id
      */
-    private Long userid;
+    private Long userId;
 
     /**
      * 创建时间
      */
-    private Date createtime;
+    private Date createTime;
 
     /**
      * 更新时间
      */
-    private Date updatetime;
+    private Date updateTime;
 
     /**
      * 是否删除	0 - 未删除	1 - 已删除
      */
     @TableLogic
-    private Integer isdelete;
+    private Integer isDelete;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
