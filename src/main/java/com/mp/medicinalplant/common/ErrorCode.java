@@ -9,6 +9,7 @@ public enum ErrorCode {
     NOT_LOGIN(40100,"用户未登录",""),
     NO_AUTH(40101,"无权限",""),
     REGISTER_FAILED(41000,"注册失败",""),
+    Query_FAILED(41001,"查询失败",""),
     SYSTEM_ERROR(50000,"系统内部错误","");
     private final int code;
     private final String message;

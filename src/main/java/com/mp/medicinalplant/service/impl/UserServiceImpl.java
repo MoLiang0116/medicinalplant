@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -70,8 +71,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         user.setAccount(userAccount);
         user.setPassword(encryptPassword);
         user.setUsername(username);
-        boolean saveResult = this.save(user);
-        if (!saveResult) {
+        user.setCreateTime(new Date());
+        user.setUpdateTime(new Date());
+        int insert = userMapper.insert(user);
+        if (insert<1) {
             throw new BusinessException(ErrorCode.REGISTER_FAILED);
         }
         return true;
@@ -127,8 +130,27 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         return safetyUser;
     }
 
+    /**
+     * 用户注销
+     *
+     * @param request
+     */
+    @Override
+    public int userLogout(HttpServletRequest request) {
+        // 移除登录态
+        request.getSession().removeAttribute(USER_LOGIN_STATE);
+        return 1;
+    }
+    @Override
+    public User getLoginUser(HttpServletRequest request) {
+        if (request==null) {
+            return null;
+        }
+        Object userObj = request.getAttribute(USER_LOGIN_STATE);
+        if (userObj==null) {
+            throw new BusinessException(ErrorCode.NO_AUTH);
+        }
+        return (User) userObj;
+    }
+
 }
-
-
-
-
