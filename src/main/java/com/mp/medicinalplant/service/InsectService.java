@@ -2,6 +2,9 @@ package com.mp.medicinalplant.service;
 
 import com.mp.medicinalplant.entity.pojo.Insect;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.mp.medicinalplant.entity.vo.InsectVO;
+
+import java.util.List;
 
 /**
 * @author 86157
@@ -10,4 +13,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface InsectService extends IService<Insect> {
 
+    List<InsectVO> queryList(String value);
 }

@@ -24,4 +24,12 @@
         controlMethod,damagePictureUrl,createTime,
         updateTime,isDelete
     </sql>
+
+    <select id="queryPlantInsectList" resultType="com.mp.medicinalplant.entity.bo.PlantInsectBO">
+        select plantinsect.plantId plantId,plantName,plantinsect.insectId insectId,insectName, insect.latinName latinName,insect.anthorNames anthorNames,insect.familyClassification familyClassification,insect.distribution distribution,insect.description description,insect.pictureUrl pictureUrl,damagePart,damageSymptom,damagePeculiarity,occurrenceRule,controlMethod,damagePictureUrl,plantinsect.createTime createTime,plantinsect.updateTime updateTime,plantinsect.isDelete isDelete
+        from plant join plantinsect on (plant.plantId = plantinsect.plantId)
+                   JOIN insect ON (insect.insectId = plantinsect.insectId)
+        where insect.insectName like "%" #{value} "%" or insect.latinName like "%" #{value} "%" or  insect.anthorNames like "%" #{value} "%"
+    </select>
+
 </mapper>

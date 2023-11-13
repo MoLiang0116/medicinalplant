@@ -4,12 +4,14 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mp.medicinalplant.common.ErrorCode;
 import com.mp.medicinalplant.entity.pojo.Plant;
+import com.mp.medicinalplant.entity.vo.PlantVO;
 import com.mp.medicinalplant.exception.BusinessException;
 import com.mp.medicinalplant.service.PlantService;
 import com.mp.medicinalplant.mapper.PlantMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -23,7 +25,7 @@ public class PlantServiceImpl extends ServiceImpl<PlantMapper, Plant>
     @Autowired
     PlantMapper plantMapper;
     @Override
-    public List<Plant> queryList(String value) {
+    public List<PlantVO> queryList(String value) {
         if (value == null){
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
@@ -37,7 +39,11 @@ public class PlantServiceImpl extends ServiceImpl<PlantMapper, Plant>
         if (plantList==null){
             throw new BusinessException(ErrorCode.Query_FAILED);
         }
-        return plantList;
+        List<PlantVO> plantVOList = new ArrayList<>();
+        plantList.forEach(plant -> {
+            plantVOList.add(new PlantVO(plant.getPlantId(),plant.getPlantName(),plant.getLatinName(),plant.getAnotherName(),plant.getFamilyClassification(),plant.getPictureUrl(),plant.getMedicinalParts(),plant.getProducer(),plant.getDescription(),plant.getCreateTime(),plant.getUpdateTime()));
+        });
+        return plantVOList;
     }
 }
 

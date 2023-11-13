@@ -9,7 +9,6 @@ import com.mp.medicinalplant.exception.BusinessException;
 import com.mp.medicinalplant.service.UserService;
 import com.mp.medicinalplant.util.ResultUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("/user")
 @CrossOrigin
-public class userController {
+public class UserController {
     @Autowired
     UserService userService;
 
